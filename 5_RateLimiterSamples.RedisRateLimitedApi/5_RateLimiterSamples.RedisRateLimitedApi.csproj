@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>_5_RateLimiterSamples.RedisRateLimitedApi</RootNamespace>
+    <AssemblyName>RateLimiterSamples.RedisRateLimitedApi</AssemblyName>
+    <UserSecretsId>6726a13d-eadb-41d5-8784-4dd26e362d6e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RedisRateLimiting.AspNetCore" Version="1.0.7" />
+	<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="7.0.1" />
+  </ItemGroup>
+
+</Project>
