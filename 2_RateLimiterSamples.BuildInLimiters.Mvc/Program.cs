@@ -20,8 +20,8 @@ rateLimiterConfig.AddFixedWindowLimiter("ApiLimit", options =>
 });
 rateLimiterConfig.AddFixedWindowLimiter("HelloLimit", options =>
 {
-    options.PermitLimit = 11;
-    options.Window = TimeSpan.FromSeconds(15);
+    options.PermitLimit = 5;
+    options.Window = TimeSpan.FromSeconds(10);
 });
 
 // FUNZIONA TUTTO
@@ -31,13 +31,13 @@ rateLimiterConfig.AddFixedWindowLimiter("HelloLimit", options =>
 // https://nicolaiarocci.com/on-implementing-the-asp.net-core-7-rate-limiting-middleware/
 
 #region ORDINE NON CORRETTO: il rate limiting non si applica!
-app.UseRateLimiter(rateLimiterConfig);
-app.UseRouting();
+// app.UseRateLimiter(rateLimiterConfig);
+// app.UseRouting();
 #endregion
 
 #region ORDINE CORRETTO!
-// app.UseRouting();
-// app.UseRateLimiter(rateLimiterConfig);
+app.UseRouting();
+app.UseRateLimiter(rateLimiterConfig);
 #endregion
 
 app.MapControllers();

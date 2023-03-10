@@ -22,7 +22,7 @@ builder.Services.AddRateLimiter(options =>
                 {
                     ConnectionMultiplexerFactory = () => connectionMultiplexer,
                     PermitLimit = 6,
-                    Window = TimeSpan.FromSeconds(20)
+                    Window = TimeSpan.FromSeconds(10)
                 }));
 });
 

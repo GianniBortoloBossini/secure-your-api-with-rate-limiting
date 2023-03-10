@@ -218,8 +218,8 @@ builder.Services.AddAuthorization();
 //                    new FixedWindowRateLimiterOptions
 //                    {
 //                        AutoReplenishment = true,
-//                        PermitLimit = 11,
-//                        Window = TimeSpan.FromSeconds(12)
+//                        PermitLimit = 20,
+//                        Window = TimeSpan.FromSeconds(30)
 //                    }))
 //            );
 // });
